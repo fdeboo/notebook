@@ -94,7 +94,7 @@ An octal number is made up of 3 numeric values that represent the access permiss
 
 7 = rwx
 
-[ Reference: permissions calculator ](http://permissions-calculator.org/)
+[ Reference: Permissions Calculator ](http://permissions-calculator.org/)
 
 
 Set permissions for a file
@@ -112,3 +112,82 @@ A directory can be added to the path variable by amending the .zshrc file in the
     export PATH=“$PATH:$HOME/bash_course/scripts”
 
 [ How to add to the shell path using macOS ]((https://wpbeaches.com/how-to-add-to-the-shell-path-in-macos-using-terminal/))
+
+# Variables
+(User defined variable eg:)
+name=name (lowercase variable name & no spaces!)
+
+## shell variables
+Pre-defined variables that have particular meaning in the bash shell
+
+## Bourne (and bash) shell variables:
+
+Stores all the directories the shell should search for executable files as command names
+
+`echo $PATH`
+
+Stores the absolute path to the current user’s home directory and is the default for the cd builtin command.
+
+`echo $HOME`
+
+The username of the current user
+
+`$USER`
+
+The name of the current host, the name that the user has given to their computer
+
+`$HOSTNAME`
+
+“Prompt stream 1” The prompt string shown in the terminal before each command
+
+`$PS1`
+
+A string describing the machine Bash is running on or processor architecture the computer is running on
+
+`$HOSTTYPE`
+
+# Parameter Expansion
+
+`name=“Fran DeBoo”`
+
+Convert the first letter to lowercase
+
+`echo ${name,} output: fran DeBoo`
+
+Convert the entire string to lowercase
+
+`echo ${name,,} output: fran deboo`
+
+Convert the first letter to uppercase
+
+`echo ${name^} output: Fran DeBoo`
+
+Convert the entire string to uppercase
+
+`echo ${name^^} output: FRAN DEBOO`
+
+Return the number of characters in a string
+
+`echo ${#name} output: 10`
+
+Slice a string
+
+`numbers=0123456789`
+
+`${parameter:offset:length}`
+
+`echo ${numbers:0:7}` *output:  0123456789*
+
+`echo ${numbers:1:5}` *output:  12345*
+
+`echo ${numbers:3}` *output:  3*
+
+`echo ${numbers:3:}` *output:*
+
+`echo ${numbers: -3:5}` *output:* 
+
+[Reference: Bad Subsitition Error](https://hybriddbablog.com/2021/01/25/bash-bad-substitution-upgrade-your-bash-version/)
+
+[Reference: Bash and Zsh](https://scriptingosx.com/2019/12/upper-or-lower-casing-strings-in-bash-and-zsh/)
+
+[Reference: zsh Modifiers](https://zsh.sourceforge.io/Doc/Release/Expansion.html#:~:text=%5B%20%3F%20%5D-,14.1.4,-Modifiers)
