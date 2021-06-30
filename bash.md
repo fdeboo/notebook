@@ -92,8 +92,6 @@ There are 5 professional components of a bash script:
 # Usage:
 ```
 
-> Current User's Home directory: `~` _or_ `$HOME`
-
 # Setting Up Permissions <a name="permissions"></a>
 
 ## **d**|**rwx**|**rwx**|**rwx**|
@@ -111,12 +109,12 @@ read / write / execute (or '-' = no permission)
 An **octal number** is made up of 3 numeric values that represent the access permissions for each set.
 
 | no. | code |
-| --- | ---- |
-| 0   | -    |
-| 4   | r--  |
-| 5   | r-x  |
-| 6   | rw-  |
-| 7   | rwx  |
+| :-: | :--: |
+|  0  |  -   |
+|  4  | r--  |
+|  5  | r-x  |
+|  6  | rw-  |
+|  7  | rwx  |
 
 [Reference: Permissions Calculator][octal-codes]
 
