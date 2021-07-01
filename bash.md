@@ -744,41 +744,80 @@ Evaluates if 2 is not equal to 2
 ```
 
 Greater than
+
+```sh
 -gt
+```
+
 Less than
+
+```sh
 -lt
+```
 
 Greater than or equal to
+
+```sh
 -geq
+```
 
 Less than or equal to
+
+```sh
 -leq
+```
 
-Test commands for strings
-Evaluate if 2 strings are equal
-= eg. [[$HOME = ~]] output: 0
+### Test commands for strings
 
-Evaluate if 2 strings are not equal
-!= [[$HOME != ~]] output: 1
+Evaluate if 2 strings are equal `=`
+
+```sh
+[[$HOME = ~]] output: 0
+```
+
+Evaluate if 2 strings are not equal `!=`
+
+```sh
+[[$HOME != ~]] output: 1
+```
 
 Evaluate if a string is empty
+
+```sh
 -z eg. [[-z $c]] ; echo $? output: 0
+```
 
 Evaluate if a string is not empty
--n eg. [[-n $c]] ; echo $? output: 1
 
-Test commands for files
+```sh
+-n eg. [[-n $c]] ; echo $? output: 1
+```
+
+### Test commands for files
+
 Evaluate if a file exists
+
+```sh
 -e eg. [[-e today.txt]] ; echo $? output: 1
+```
 
 Test if a regular file
+
+```sh
 -f eg. [[-f today.txt]] ; echo $?
+```
 
 Test if a directory
+
+```sh
 -d eg. [[-d today.txt]] ; echo $? output: 1
+```
 
 Test if a file exists and has execution permissions
+
+```sh
 -x eg. [[-x script]] ; echo $?
+```
 
 if statements
 if statements start and end using the reserved words ‘if’ and ‘fi’. If statements check the exit status of a command. If statements only run code ‘if’ a certain condition is true (exit status 0).
