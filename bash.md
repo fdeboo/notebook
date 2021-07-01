@@ -709,11 +709,11 @@ A list of commands is one or more commands on a given line
 
 List operators are examples of **control operators**
 |operator|description|
-|-------:|-----------|
+|-------:|:-----------|
 |`&`|run commands asynchronously|
 |`;`|run synchronously and saves space in bash script|
 |`&&`|makes it so that the second command only runs if the first command is successful (`exit 0`)|
-|`||`|makes it so that the second command only runs if the first one failed|
+|`\|\|`|makes it so that the second command only runs if the first one failed|
 
 ## Ternary operator
 
